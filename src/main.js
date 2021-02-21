@@ -5,11 +5,13 @@ import mitt from 'mitt';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
+import './assets/css/style.css'
 
 // Store, Mixins & Plugins
 import store from './store'
 import i18n from "./utils/plugins/i18n";
 import base from "./utils/mixins/base";
+import global from "./utils/plugins/global";
 
 import router from "./router";
 import App from './App.vue';

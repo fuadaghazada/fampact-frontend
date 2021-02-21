@@ -16,6 +16,7 @@ export const ADD_CHILD_SUCCESS = 'ADD_CHILD_SUCCESS';
 // Task module types
 export const LIST_TASKS = 'LIST_TASKS';
 export const RETRIEVE_TASK = 'RETRIEVE_TASK';
+export const ADD_TASK = 'ADD_TASK';
 export const UPDATE_TASK = 'UPDATE_TASK';
 export const DELETE_TASK = 'DELETE_TASK';
 export const UPDATE_TASK_STATUS = 'UPDATE_TASK_STATUS';

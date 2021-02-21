@@ -23,7 +23,7 @@ const actions = {
     },
     async login({commit, dispatch}, data) {
         const response = await api.auth.login(data);
-        localStorage.setItem('fampact_access_token', response.data['access']);
+        localStorage.setItem('fampact_access_token', response.data['token']);
         commit(LOGIN_SUCCESS, response);
         await dispatch('getAuthUser');
     },
@@ -36,7 +36,6 @@ const actions = {
     async logout({commit}) {
         localStorage.removeItem('fampact_access_token');
         commit(AUTH_USER_SUCCESS, null);
-        window.location.reload();
     },
     async sendVerification({commit}, data) {
         const response = await api.auth.forgotPassword(data);

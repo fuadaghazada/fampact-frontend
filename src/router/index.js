@@ -1,4 +1,6 @@
 import {createRouter, createWebHistory} from "vue-router";
+import store from '../store';
+
 
 const routes = [
     {
@@ -9,14 +11,46 @@ const routes = [
             {
                 path: '',
                 name: 'home',
-                component: () => import('../views/HelloWorld'),
+                component: () => import('../views/tasks'),
             }
         ]
-
     },
-    // ...authRoutes,
-    // ...doctorRoutes,
-    // ...userRoutes,
+    {
+        path: '/login',
+        name: 'login',
+        components: require('../components/layouts/AuthLayout'),
+        children: [
+            {
+                path: '',
+                name: 'login',
+                component: () => import('../views/login'),
+            }
+        ]
+    },
+    {
+        path: '/family_leader_board',
+        name: 'family_leader_board',
+        components: require('../components/layouts/MainLayout'),
+        children: [
+            {
+                path: '',
+                name: 'family_leader_board',
+                component: () => import('../views/famLeaderboard'),
+            }
+        ]
+    },
+    {
+        path: '/global_leader_board',
+        name: 'global_leader_board',
+        components: require('../components/layouts/MainLayout'),
+        children: [
+            {
+                path: '',
+                name: 'global_leader_board',
+                component: () => import('../views/globalLeaderboard'),
+            }
+        ]
+    }
 ];
 
 const router = createRouter({
@@ -24,22 +58,10 @@ const router = createRouter({
     routes
 });
 
-// router.beforeEach(async (to, from, next) => {
-//     await store.dispatch('auth/getAuthUser');
-//
-//     if (to.matched.some(record => record.meta.requiresAuth)) {
-//         try {
-//             if (!store.getters['auth/isAuth']) {
-//                 next({path: '/auth/login'});
-//             } else {
-//                 next();
-//             }
-//         } catch (e) {
-//             console.log('No auth user');
-//         }
-//     } else {
-//         next();
-//     }
-// });
+router.beforeEach(async (to, from, next) => {
+    await store.dispatch('auth/getAuthUser');
+
+    next();
+});
 
 export default router;

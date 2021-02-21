@@ -1,3 +1,6 @@
 {
-  "hello": "Salam"
+  "hello": "Salam",
+  "newTask": "Yeni tapşırıq",
+  "taskName": "Tapşırığın adı"
+
 }

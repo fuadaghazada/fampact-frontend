@@ -1,5 +1,6 @@
 import api from "../../api";
 import {
+    ADD_TASK,
     LIST_TASKS,
     RETRIEVE_TASK,
     UPDATE_TASK,
@@ -16,6 +17,10 @@ const getters = {
 };
 
 const actions = {
+    async addTask({commit}, {data}) {
+        const response = await api.task.addTask(data);
+        commit(ADD_TASK, response.data);
+    },
     async listTasks({commit}, params = {}) {
         const response = await api.task.listTasks(params);
         commit(LIST_TASKS, response.data);
@@ -32,15 +37,25 @@ const actions = {
         const response = await api.task.deleteTask(id);
         commit(DELETE_TASK, response.data);
     },
-    async updateStatus({commit}, {id}) {
-        const response = await api.task.updateTask(id);
+    async updateStatus({commit}, {id, status}) {
+        const response = await api.task.updateStatus(id, status);
         commit(UPDATE_TASK_STATUS, response.data);
     }
 };
 
 const mutations = {
+    [ADD_TASK](state, response) {
+        console.log(response['statusText']);
+    },
     [LIST_TASKS](state, response) {
-        state.tasks = response.results;
+        state.tasks = response.results
+            .map(data => ({
+                id: data.id,
+                member_name: data['assigned_to'] ? data['assigned_to']['first_name'] : data['created_by']['first_name'],
+                title: data.title,
+                deadline: data.deadline,
+                status: data.status.toLowerCase()
+            }));
     },
     [RETRIEVE_TASK](state, response) {
         console.log(response['statusText']);

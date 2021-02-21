@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 20px;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #751ADB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 54px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+}
+
+#sidebar .h6 {
+    color: #fff;
+}
+
+#sidebar.active {
+    margin-left: -270px;
+}
+
+#sidebar.active .custom-menu {
+    margin-right: -50px;
+}
+
+#sidebar h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+#sidebar h1 .logo {
+    color: #fff;
+}
+
+#sidebar ul.components {
+    padding: 0;
+}
+
+#sidebar ul li {
+    font-size: 16px;
+    margin: 30px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+
+
+}
+
+#sidebar ul li a {
+    margin: 5px;
+    padding: 10px 0;
+    display: inline;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+}
+
+#sidebar ul li.active > a {
+    background: transparent;
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    #sidebar {
+        margin-left: -270px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #sidebar .custom-menu {
+        margin-right: -50px !important;
+        top: 10px !important;
+    }
+}
+
+#sidebar .custom-menu {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    margin-right: -20px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #sidebar .custom-menu {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+}
+
+#sidebar .custom-menu .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#sidebar .custom-menu .btn.btn-primary {
+    background: #FE705A;
+    border-color: #FE705A;
+}
+
+#sidebar .custom-menu .btn.btn-primary:hover, #sidebar .custom-menu .btn.btn-primary:focus {
+    background: #FE705A !important;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@media (max-width: 991.98px) {
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+#content {
+    width: 100%;
+    padding: 0;
+    min-height: 100vh;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+th {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #878787;
+}
+
+
+td {
+    font-weight: 500;
+    font-size: 14px;
+    color: #414141;
+
+}
+
+h2 {
+    display: inline;
+}
+
+.chosen-button {
+    padding: 8px;
+
+    background: #751ADB;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+}
+
+
+.additional-button {
+
+    padding: 8px;
+    background: #8663D7;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+}
+
+.leaderboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+
+.add-new-button {
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    background: #FE705A;
+    border-radius: 50%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline;
+
+    text-align: center;
+
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+}
+
+span {
+    margin: 10px;
+}
+
+.orange-col a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #FE705A;
+}
+
+
+.sidebar-icon {
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.active-page {
+    background-color: white;
+}
+
+.done {
+    background-color: #41AF8D;
+
+}
+
+.doing {
+    background-color: #CF2A13;
+
+}
+
+.pending {
+    background-color: #F2A105;
+
+}
+
+.status {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
