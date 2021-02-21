@@ -1,0 +1,26 @@
+// Auth module types
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const AUTH_USER_SUCCESS = 'AUTH_USER_SUCCESS';
+export const SET_PASSWORD_SUCCESS = 'SET_PASSWORD_SUCCESS';
+export const VERIFY_USER_SUCCESS = 'VERIFY_USER_SUCCESS';
+export const GET_AUTH_USER = 'GET_AUTH_USER';
+export const UPDATE_AUTH_USER = 'UPDATE_AUTH_USER';
+
+// Account module types
+export const GET_MY_FAMILY = 'GET_MY_FAMILY';
+export const UPDATE_MY_FAMILY = 'UPDATE_MY_FAMILY';
+export const ADD_MEMBER_SUCCESS = 'ADD_MEMBER_SUCCESS';
+export const ADD_CHILD_SUCCESS = 'ADD_CHILD_SUCCESS';
+
+// Task module types
+export const LIST_TASKS = 'LIST_TASKS';
+export const RETRIEVE_TASK = 'RETRIEVE_TASK';
+export const UPDATE_TASK = 'UPDATE_TASK';
+export const DELETE_TASK = 'DELETE_TASK';
+export const UPDATE_TASK_STATUS = 'UPDATE_TASK_STATUS';
+
+// Scoring
+export const GET_PUBLIC_LEADER_BOARD = 'GET_PUBLIC_LEADER_BOARD';
+export const GET_PRIVATE_LEADER_BOARD = 'GET_PRIVATE_LEADER_BOARD';
+
